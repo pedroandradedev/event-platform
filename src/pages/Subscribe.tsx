@@ -55,6 +55,7 @@ export function Subscribe() {
               className="bg-gray-900 rounded px-5 h-14 border border-gray-900 hover:border-blue-500 focus:border focus:border-blue-500 focus:outline-none placeholder:text-gray-300"
               type="email"
               placeholder="Digite seu e-mail"
+              autoComplete="false"
               onChange={event => setEmail(event.target.value)}
             />
 
