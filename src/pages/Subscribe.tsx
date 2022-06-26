@@ -44,18 +44,19 @@ export function Subscribe() {
         <div className="w-full mt-8 lg:mt-0 lg:w-auto p-8 bg-gray-700 border border-gray-500 rounded">
           <strong className="text-2xl mb-6 block">Inscreva-se gratuitamente</strong>
 
-          <form onSubmit={handleSubscribe} className="flex flex-col gap-2 w-full">
+          <form onSubmit={handleSubscribe} className="flex flex-col gap-2 w-full" autoComplete="off">
             <input
               className="bg-gray-900 rounded px-5 h-14 border border-gray-900 hover:border-blue-500 focus:border focus:border-blue-500 focus:outline-none placeholder:text-gray-300"
               type="text"
               placeholder="Seu nome completo"
+              autoComplete="off"
               onChange={event => setName(event.target.value)}
             />
             <input
               className="bg-gray-900 rounded px-5 h-14 border border-gray-900 hover:border-blue-500 focus:border focus:border-blue-500 focus:outline-none placeholder:text-gray-300"
               type="email"
               placeholder="Digite seu e-mail"
-              autoComplete="false"
+              autoComplete="off"
               onChange={event => setEmail(event.target.value)}
             />
 

@@ -3,6 +3,56 @@
 @tailwind utilities;
 
 body {
-  @apply bg-gray-900 text-gray-100;
+  @apply bg-gray-900 text-gray-100 overflow-x-hidden;
   -webkit-font-smoothing: antialiased;
+}
+
+body.menu-open {
+  @apply overflow-hidden lg:overflow-y-auto
+}
+
+.menu {
+  @apply flex flex-col items-center justify-center w-6;
+}
+
+.menu > div,
+.menu::before,
+.menu::after {
+  @apply block absolute rounded-xl bg-white w-6 h-0.5 my-1 transition-all duration-75 opacity-100;
+}
+
+.menu::before {
+  @apply mt-4;
+  content: "";
+}
+
+.menu::after {
+  @apply -mt-2;
+  content: "";
+}
+
+.menu.open > div,
+.menu.open::before,
+.menu.open::after {
+  @apply bg-blue-500
+}
+
+.menu.open > div {
+  @apply opacity-0
+}
+
+.menu.open::before {
+  @apply mt-1 rotate-45;
+}
+
+.menu.open::after {
+  @apply mt-1 -rotate-45;
+}
+
+.sidebar {
+  @apply w-full lg:w-[348px] bg-gray-700 p-6 border-l border-gray-600 left-full lg:left-0 lg:block fixed lg:relative overflow-y-auto lg:overflow-y-auto h-[calc(100vh_-_theme(height.16))] lg:h-auto;
+}
+
+.sidebar.open {
+  @apply left-0 z-[999];
 }

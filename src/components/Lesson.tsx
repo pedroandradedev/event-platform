@@ -9,6 +9,7 @@ interface LessonProps {
   slug: string
   availableAt: Date
   type: 'live' | 'class'
+  onClick(): void
 }
 
 export function Lesson(props: LessonProps) {
@@ -21,10 +22,14 @@ export function Lesson(props: LessonProps) {
 
   const isActiveLesson = slug === props.slug
 
+  const handleClickLesson = () => {
+    props.onClick()
+  }
+
   return (
     <Link to={isLessonAvailable ? `/event/lesson/${props.slug}` : '#'} className={classNames('group', {
       'pointer-events-none': !isLessonAvailable
-    })}>
+    })} onClick={handleClickLesson}>
       <span className="text-gray-300">
         {availableDateFormatted.charAt(0).toUpperCase() + availableDateFormatted.slice(1)}
       </span>
