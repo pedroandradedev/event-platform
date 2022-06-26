@@ -11,6 +11,10 @@ body.menu-open {
   @apply overflow-hidden lg:overflow-y-auto
 }
 
+a {
+  @apply font-bold text-blue-500
+}
+
 .menu {
   @apply flex flex-col items-center justify-center w-6;
 }
