@@ -13,7 +13,7 @@ export function Header(props: HeaderProps) {
 
   return (
     <header className="fixed w-full h-16 p-5 flex items-center justify-between lg:justify-center bg-gray-700 border-b border-gray-600 z-[999] gap-4">
-      <Logo classes="h-10" />
+      <Logo classes="h-8 lg:h-10" />
       <div className="flex lg:hidden cursor-pointer" onClick={handleClickMenu}>
         <span className="mr-2">Aulas</span>
         <div className={classNames('menu', {
