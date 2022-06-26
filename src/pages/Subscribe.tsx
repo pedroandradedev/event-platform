@@ -28,8 +28,8 @@ export function Subscribe() {
 
   return (
     <div className="min-h-screen bg-blur bg-cover bg-no-repeat flex flex-col items-center">
-      <div className="w-full max-w-[1100px] flex items-center justify-between mt-20 mx-auto">
-        <div className="max-w-[640px]">
+      <div className="w-full max-w-[1100px] flex items-center justify-between flex-col lg:flex-row mt-20 mx-auto">
+        <div className="w-full lg:max-w-[640px] flex flex-col items-center lg:items-start text-center lg:text-left px-4">
           <Logo />
 
           <h1 className="mt-8 text-[2.5rem] leading-tight">
@@ -41,18 +41,18 @@ export function Subscribe() {
           </p>
         </div>
 
-        <div className="p-8 bg-gray-700 border border-gray-500 rounded">
+        <div className="w-full mt-8 lg:mt-0 lg:w-auto p-8 bg-gray-700 border border-gray-500 rounded">
           <strong className="text-2xl mb-6 block">Inscreva-se gratuitamente</strong>
 
           <form onSubmit={handleSubscribe} className="flex flex-col gap-2 w-full">
             <input
-              className="bg-gray-900 rounded px-5 h-14 border border-gray-900 hover:border-green-500 focus:border focus:border-green-500 focus:outline-none placeholder:text-gray-300"
+              className="bg-gray-900 rounded px-5 h-14 border border-gray-900 hover:border-blue-500 focus:border focus:border-blue-500 focus:outline-none placeholder:text-gray-300"
               type="text"
               placeholder="Seu nome completo"
               onChange={event => setName(event.target.value)}
             />
             <input
-              className="bg-gray-900 rounded px-5 h-14 border border-gray-900 hover:border-green-500 focus:border focus:border-green-500 focus:outline-none placeholder:text-gray-300"
+              className="bg-gray-900 rounded px-5 h-14 border border-gray-900 hover:border-blue-500 focus:border focus:border-blue-500 focus:outline-none placeholder:text-gray-300"
               type="email"
               placeholder="Digite seu e-mail"
               onChange={event => setEmail(event.target.value)}
@@ -61,7 +61,7 @@ export function Subscribe() {
             <button
               type="submit"
               disabled={loading}
-              className="mt-5 bg-green-500 uppercase py-4 rounded font-bold text-sm hover:bg-green-700 transition-colors disabled:opacity-50"
+              className="mt-5 text-gray-700 bg-blue-500 uppercase py-4 rounded font-bold text-sm hover:bg-blue-700 transition-colors disabled:opacity-50"
             >
               Garantir minha vaga
             </button>

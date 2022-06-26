@@ -30,15 +30,15 @@ export function Lesson(props: LessonProps) {
       </span>
 
       <div className={classNames('rounded border p-4 mt-2', {
-        'border-green-500 bg-green-500 relative before:w-3 before:h-3 before:absolute before:bg-green-500 before:top-2/4 before:left-0 before:-translate-x-2/4 before:-translate-y-2/4 before:rotate-45 before:rounded-sm': isActiveLesson,
+        'border-blue-500 bg-blue-500 relative before:w-3 before:h-3 before:absolute before:bg-blue-500 before:top-2/4 before:left-0 before:-translate-x-2/4 before:-translate-y-2/4 before:rotate-45 before:rounded-sm': isActiveLesson,
         'border-gray-500': !isActiveLesson,
-        'group-hover:border-green-500': isLessonAvailable,
+        'group-hover:border-blue-500': isLessonAvailable,
         'opacity-50': !isLessonAvailable
       })}>
         <header className="flex items-center justify-between">
           {isLessonAvailable ? (
             <span className={classNames('text-sm font-medium flex items-center gap-2', {
-              'text-white': isActiveLesson,
+              'text-gray-700': isActiveLesson,
               'text-blue-500': !isActiveLesson
             })}>
               <CheckCircle size={20} />
@@ -51,16 +51,17 @@ export function Lesson(props: LessonProps) {
             </span>
           )}
           
-          <span className={classNames('text-xs rounded py-[0.125rem] px-2 text-white border font-bold', {
-            'border-white': isActiveLesson,
-            'border-green-300': !isActiveLesson
+          <span className={classNames('text-xs rounded py-[0.125rem] px-2 border font-bold', {
+            'border-gray-700 text-gray-700': isActiveLesson,
+            'border-blue-300 text-white': !isActiveLesson && isLessonAvailable,
+            'border-orange-500 text-white': !isLessonAvailable
           })}>
             {props.type === 'live' ? 'AO VIVO' : ' AULA PRÁTICA'}
           </span>
         </header>
         
         <strong className={classNames('mt-5 block', {
-          'text-white': isActiveLesson,
+          'text-gray-700': isActiveLesson,
           'text-gray-200': !isActiveLesson
         })}>
           {props.title}
