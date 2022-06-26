@@ -18,7 +18,7 @@
 **Clone the project and acess the folder**
 
 ```bash
-git clone https://github.com/migueloliveiraz/event-platform.git && cd event-platform
+git clone git@github.com:pedroandradedev/event-platform.git && cd event-platform
 ```
 
 **Follow the steps below**
@@ -41,10 +41,10 @@ $ yarn dev
 
 ## 📝 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License.
 
 ---
 
 <p align="center">
-  by <a href="https://www.linkedin.com/in/miguel-oliv/">Miguel Oliveira</a>
+  by <a href="https://www.linkedin.com/in/pedroandradeo">Pedro Andrade</a>
 </p>
