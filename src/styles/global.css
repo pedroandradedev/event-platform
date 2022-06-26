@@ -50,7 +50,7 @@ body.menu-open {
 }
 
 .sidebar {
-  @apply w-full lg:w-[348px] bg-gray-700 p-6 border-l border-gray-600 left-full lg:left-0 lg:block fixed lg:relative overflow-y-auto lg:overflow-y-auto h-[calc(100vh_-_theme(height.16))] lg:h-auto;
+  @apply w-full lg:w-[348px] bg-gray-700 p-6 border-l border-gray-600 left-full lg:left-0 lg:block fixed lg:relative overflow-y-auto lg:overflow-y-auto h-[calc(100%_-_theme(height.16))] lg:h-auto;
 }
 
 .sidebar.open {
