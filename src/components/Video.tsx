@@ -49,8 +49,11 @@ export function Video(props: VideoProps) {
             <h1 className="text-2xl font-bold">
               {data.lesson.title}
             </h1>
-            <p className="mt-4 text-gray-200 leading-relaxed" dangerouslySetInnerHTML={{__html: data.lesson.description?.html}}>
-            </p>
+            {data.lesson.description &&
+              <p className="mt-4 text-gray-200 leading-relaxed" dangerouslySetInnerHTML={{__html: data.lesson.description.html}}>
+              </p>
+            }
+            
 
             {data.lesson.teacher && (
               <div className="flex items-center gap-4 mt-6">
